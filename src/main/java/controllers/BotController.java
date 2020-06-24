@@ -83,7 +83,7 @@ public class BotController extends TelegramLongPollingBot {
         InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> table = new ArrayList<>();
 
-        List<InlineKeyboardButton> buttonRow = new ArrayList(3);
+        List<InlineKeyboardButton> buttonRow = new ArrayList<InlineKeyboardButton>(3);
         buttonRow.add(new InlineKeyboardButton().setText("Ruble").setCallbackData(CurrencyParser.converter(ExchangeRates.RUB_KZT)));
         buttonRow.add(new InlineKeyboardButton().setText("Dollar").setCallbackData(CurrencyParser.converter(ExchangeRates.USD_KZT)));
         buttonRow.add(new InlineKeyboardButton().setText("Euro").setCallbackData(CurrencyParser.converter(ExchangeRates.EUR_KZT)));
